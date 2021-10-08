@@ -1,0 +1,27 @@
+﻿<Window x:Class="PanAndZoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PanAndZoom"
+        Title="PanAndZoom" Height="600" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Image Pan & Zoom https://stackoverflow.com/questions/741956/pan-zoom-image -->
+        <local:ZoomBorder x:Name="border" ClipToBounds="True" Background="Gray" Grid.Column="0">
+            <Image x:Name="LoadedImage" Stretch="None">
+                <Image.Source>
+                    <BitmapImage UriSource="/cells.png" Rotation="Rotate0"/>
+                </Image.Source>
+            </Image>
+        </local:ZoomBorder>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Column="1">
+            <Button Content="Rotate Left" Margin="10, 2.5, 10, 2.5" Click="RotateLeftClick"/>
+            <Button Content="Rotate Right" Margin="10, 2.5, 10, 2.5" Click="RotateRightClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
