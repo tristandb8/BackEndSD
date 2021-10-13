@@ -54,3 +54,13 @@ C:\Users\kendr\Desktop\Senior Design\WPFUI\obj\Debug\WPFUI.csproj.GenerateResour
 C:\Users\kendr\Desktop\Senior Design\WPFUI\obj\Debug\WPFUI.csproj.CoreCompileInputs.cache
 C:\Users\kendr\Desktop\Senior Design\WPFUI\obj\Debug\WPFUI.exe
 C:\Users\kendr\Desktop\Senior Design\WPFUI\obj\Debug\WPFUI.pdb
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\WPFUI.csproj.AssemblyReference.cache
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\Views\FirstChildView.g.cs
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\Views\SecondChildView.g.cs
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\Views\ShellView.g.cs
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\App.g.cs
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\WPFUI_MarkupCompile.cache
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\WPFUI_MarkupCompile.lref
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\WPFUI.exe
+C:\Users\kendr\OneDrive\Documents\VScodeFiles\BackEndSD\Senior_Design\WPFUI\obj\Debug\WPFUI.pdb

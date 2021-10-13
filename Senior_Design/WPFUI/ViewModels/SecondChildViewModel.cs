@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -21,12 +17,13 @@ using System.Windows.Shapes;
 
 namespace WPFUI.ViewModels
 {
-    public partial class SecondChildViewModel : Screen
+    public partial class SecondChildViewModel : Window
     {
+        private ImageModel _selectedImage;
 
         public SecondChildViewModel()
         {
-            InitializeComponent();
+            // InitializeComponent();
         }
 
         public void RotateLeftClick(object sender, RoutedEventArgs e)
