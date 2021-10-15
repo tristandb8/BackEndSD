@@ -6,7 +6,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:local="clr-namespace:PhotoEditor"
         mc:Ignorable="d"
-        Title="Фоторедактор" Height="560" Width="737.5" WindowStyle="ThreeDBorderWindow"
+        Title="Photo editor" Height="560" Width="737.5" WindowStyle="ThreeDBorderWindow"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="Resources/15.ico">
     <Window.Resources>
         <ResourceDictionary>
@@ -19,13 +19,13 @@
         <StackPanel Orientation="Horizontal" Background="DimGray">
             <Menu Height="30">
                 <MenuItem Name="menuItemFile"
-                          Header="Файл">
+                          Header="File">
                     <MenuItem Name="menuItemOpen"
-                          Header="Открыть"
+                          Header="Open"
                           Command="{Binding OpenCommand}">
                     </MenuItem>
                     <MenuItem Name="menuItemSave"
-                          Header="Сохранить"
+                          Header="Save"
                           Command="{Binding SaveCommand}">
                     </MenuItem>
                 </MenuItem>
@@ -34,7 +34,7 @@
                     BorderBrush="Transparent" Margin="600,0,0,0"
                     Command="{Binding GetHelpCommand}"
                     VerticalAlignment="Center" HorizontalAlignment="Center" Width="30"
-                    ToolTip="О программе" BorderThickness="0,0,0,0" Height="30">
+                    ToolTip="About the program" BorderThickness="0,0,0,0" Height="30">
                 <Image Source="Resources/help.png"
                        HorizontalAlignment="Right" Width="30" />
             </Button>
@@ -43,39 +43,39 @@
             <TabControl Margin="0,0,0,366">
 
                 <!--Изменить размер-->
-                <TabItem Name="tabResize" Header="Изменить размер" Foreground="White">
+                <TabItem Name="tabResize" Header="Resize" Foreground="White">
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Метод:" Margin="10,0,0,0" VerticalAlignment="Center" Width="50" />
+                        <Label Content="Method:" Margin="10,0,0,0" VerticalAlignment="Center" Width="50" />
                         <ComboBox Width="116" Height="30" Foreground="White">
-                            <ComboBoxItem x:Name="cbItemNeighbourInterpolationContent" Content="Метод ближайшего соседа" />
-                            <ComboBoxItem x:Name="cbItemBilinearInterpolationContent" Content="Билинейная интерполяция" />
+                            <ComboBoxItem x:Name="cbItemNeighbourInterpolationContent" Content="Nearest Neighbor Method" />
+                            <ComboBoxItem x:Name="cbItemBilinearInterpolationContent" Content="Bilinear interpolation" />
                         </ComboBox>
-                        <Label Content="Масштаб:" Margin="10,0,0,0"  Width="60" VerticalAlignment="Center" />
+                        <Label Content="Scale:" Margin="10,0,0,0"  Width="60" VerticalAlignment="Center" />
                         <Slider Name="sliderScale" Width="115" VerticalAlignment="Center" />
                     </StackPanel>
                 </TabItem>
 
                 <!--Коррекция-->
-                <TabItem Name="tabCorrection" Header="Коррекция" Foreground="White">
+                <TabItem Name="tabCorrection" Header="Correction" Foreground="White">
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Градационная коррекция:" Margin="10,0,10,0" VerticalAlignment="Center" />
+                        <Label Content="Gradation correction:" Margin="10,0,10,0" VerticalAlignment="Center" />
                         <ComboBox Name="comboCorrection" Width="145" Height="30" Foreground="White" Margin="0,11">
-                            <ComboBoxItem Content="Линейная" />
-                            <ComboBoxItem IsSelected="{Binding CbItemSineCorrection}" Content="Синусоидальная">
+                            <ComboBoxItem Content="Linear" />
+                            <ComboBoxItem IsSelected="{Binding CbItemSineCorrection}" Content="Sinusoidal">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Selected">
                                         <i:InvokeCommandAction Command="{Binding ApplyGradeFilterCommand}" />
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </ComboBoxItem>
-                            <ComboBoxItem IsSelected="{Binding CbItemExpCorrection}" Content="Экспоненциальная">
+                            <ComboBoxItem IsSelected="{Binding CbItemExpCorrection}" Content="Exponential">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Selected">
                                         <i:InvokeCommandAction Command="{Binding ApplyGradeFilterCommand}" />
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                             </ComboBoxItem>
-                            <ComboBoxItem IsSelected="{Binding CbItemLogCorrection}" Content="Логарифмическая">
+                            <ComboBoxItem IsSelected="{Binding CbItemLogCorrection}" Content="Logarithmic">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Selected">
                                         <i:InvokeCommandAction Command="{Binding ApplyGradeFilterCommand}" />
@@ -83,7 +83,7 @@
                                 </i:Interaction.Triggers>
                             </ComboBoxItem>
                         </ComboBox>
-                        <Label Content="Гамма-коррекция:" Margin="10,0,10,0" VerticalAlignment="Center" />
+                        <Label Content="Gamma Correction:" Margin="10,0,10,0" VerticalAlignment="Center" />
                         <Slider Name="sliderGamma" Width="143"
                                 Value="{Binding SliderValueGamma, Delay=10}"
                                 VerticalAlignment="Center" Height="15" 
@@ -98,11 +98,11 @@
                 </TabItem>
 
                 <!--Фильтр-->
-                <TabItem Name="tabFilter" Header="Фильтр" Foreground="White">
+                <TabItem Name="tabFilter" Header="Filter" Foreground="White">
                     <DockPanel>
                         <StackPanel Orientation="Vertical" Margin="0,6,0,0">
-                            <Label Content="Яркость:" Margin="10,0,10,0" VerticalAlignment="Center" />
-                            <Label Content="Контрастность:" Margin="10,0,10,0" VerticalAlignment="Center" />
+                            <Label Content="Brightness:" Margin="10,0,10,0" VerticalAlignment="Center" />
+                            <Label Content="Contrast:" Margin="10,0,10,0" VerticalAlignment="Center" />
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" Margin="0,6,0,0" Width="118">
@@ -128,11 +128,11 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                         </StackPanel>
-                        <Label Content="Цветовой баланс:" Margin="15,15,10,11"
+                        <Label Content="Color balance:" Margin="15,15,10,11"
                                VerticalAlignment="Center" Height="26" Width="110" />
                         <StackPanel Orientation="Vertical" Width="122">
                             <Slider Name="sliderRed" Margin="26,0,10,3"
-                                    ToolTip="Красный" 
+                                    ToolTip="Red" 
                                     Minimum="0" Maximum="100"
                                     Cursor="Hand"
                                     Value="{Binding SliderValueRed}">
@@ -143,7 +143,7 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                             <Slider Name="sliderGreen" Margin="26,0,10,3"
-                                    ToolTip="Зеленый" 
+                                    ToolTip="Green" 
                                     Minimum="0" Maximum="100"
                                     Cursor="Hand"
                                     Value="{Binding SliderValueGreen}">
@@ -154,7 +154,7 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                             <Slider Name="sliderBlue" Margin="26,0,10,3"
-                                    ToolTip="Синий" 
+                                    ToolTip="Blue" 
                                     Minimum="0" Maximum="100"
                                     Cursor="Hand"
                                     Value="{Binding SliderValueBlue}">
@@ -165,7 +165,7 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                         </StackPanel>
-                        <CheckBox Name="chkGray" Content="Черно-белый"
+                        <CheckBox Name="chkGray" Content="Black and white"
                                   IsChecked="{Binding Checked}"
                                   Margin="0,16,0,14" Width="118">
                             <i:Interaction.Triggers>
@@ -178,12 +178,12 @@
                 </TabItem>
 
                 <!--Эффекты-->
-                <TabItem Name="tabEffects" Header="Виньетирование" Foreground="White">
+                <TabItem Name="tabEffects" Header="Vignetting" Foreground="White">
                     <DockPanel>
                         <Label Content="Цвета:" Margin="15,0,10,0" VerticalAlignment="Center" />
                         <StackPanel Orientation="Vertical" Width="190" Margin="0,2,0,0">
                             <Slider Name="sliderRedV"
-                                    Margin="39,0,10,3" ToolTip="Красный" Value="{Binding SliderValueRedV}">
+                                    Margin="39,0,10,3" ToolTip="Red" Value="{Binding SliderValueRedV}">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="ValueChanged">
                                         <i:InvokeCommandAction Command="{Binding ApplyFilterCommandVignette}" />
@@ -191,7 +191,7 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                             <Slider Name="sliderGreenV"
-                                    Margin="39,0,10,3" ToolTip="Зеленый" Value="{Binding SliderValueGreenV}">
+                                    Margin="39,0,10,3" ToolTip="Green" Value="{Binding SliderValueGreenV}">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="ValueChanged">
                                         <i:InvokeCommandAction Command="{Binding ApplyFilterCommandVignette}" />
@@ -199,7 +199,7 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                             <Slider Name="sliderBlueV"
-                                    Margin="39,0,10,3" ToolTip="Синий" Value="{Binding SliderValueBlueV}">
+                                    Margin="39,0,10,3" ToolTip="Blue" Value="{Binding SliderValueBlueV}">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="ValueChanged">
                                         <i:InvokeCommandAction Command="{Binding ApplyFilterCommandVignette}" />
@@ -207,7 +207,7 @@
                                 </i:Interaction.Triggers>
                             </Slider>
                         </StackPanel>
-                        <CheckBox x:Name="chkBlack" Content="По умолчанию"
+                        <CheckBox x:Name="chkBlack" Content="Default"
                                   IsChecked="{Binding BlackVignetteChecked, UpdateSourceTrigger=PropertyChanged}"
                                   Command="{Binding ApplyFilterCommandVignette}"
                                   Height="19">
@@ -226,7 +226,7 @@
         </Grid>
         <StackPanel Orientation="Horizontal" Margin="10,0" Height="50">
             <Button x:Name="btnUndo" Width="150" Height="35"
-                    Margin="260,0" Content="Отменить изменения"
+                    Margin="260,0" Content="cancel changes"
                     Visibility="{Binding ElementVisible, UpdateSourceTrigger=PropertyChanged}"
                     Command="{Binding UndoCommand}"/>
         </StackPanel>
